@@ -1,0 +1,125 @@
+body {
+    font-family: 'The Oldventure', 'Shutter Camp', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('stickman.jpeg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+header {
+    background-color: #610404;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#video-container {
+    margin-bottom: 20px; /* Reduced margin between video and next section */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+} 
+
+/* CSS for breaking news bar */
+.breaking-news {
+    background-color: #660e0e; /* Brick red background */
+    color: #fbd811; /* White text color */
+    padding: 10px 0; /* Add padding for better readability */
+    text-align: center; /* Center align text */
+    font-family: 'The Oldventure', 'Shutter Camp', sans-serif; /* Fun and cartoonish font */
+}
+
+/* CSS for breaking news text */
+.breaking-news-text {
+    font-weight: bold; /* Bold text */
+    font-size: 24px; /* Larger font size */
+    margin-right: 10px; /* Add margin between breaking news text and news */
+}
+
+/* CSS for news text */
+.news {
+    font-size: 18px; /* Smaller font size */
+}
+
+#video-section {
+    height: 100vh;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+#video-section.video-scrolled {
+    height: 50vh;
+}
+
+#interactive-section {
+    padding-top: 20px; /* Reduced padding-top between video and next section */
+    padding-bottom: 50vh; /* Space for the collapsed video */
+}
+
+#photo-carousel {
+    display: flex; /* Display images in a row */
+    justify-content: center; /* Center images horizontally */
+    margin-bottom: 20px;
+}
+
+#photo-carousel img {
+    width: 200px; /* Adjust the width of the images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between images */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#photo-carousel img:last-child {
+    margin-right: 0; /* Remove margin from last image */
+}
+
+#photo-carousel img:hover {
+    transform: scale(1.1);
+}
+
+#dom-change {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+#slider input {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#slider label {
+    font-size: 18px;
+}
+
+#video-container {
+    margin-bottom: 20px; /* Reduced margin between video and next section */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
