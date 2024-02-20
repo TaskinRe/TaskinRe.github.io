@@ -16,5 +16,7 @@ Testing: Throughout the development process, I conducted testing to ensure the w
 
 Documentation: Finally, I documented the project on my GitHub account by editing the README file. This documentation includes a detailed overview of the project, the process of implementation, and a reflection on the achieved outcomes.
 
-Reflection/Evaluation:
+Reflection: Reflection: As a beginner, I had high hopes and tried to do many interactive parts of the website, some were successful and some failed. I learned to go by small steps but do the steps properly. I spent a long time trying to create animation on the webpage but that required more professional knowledge and experience. I added a button and a new page previously which were linked perfectly, but I planned to add vector animation/motion graphics but was not successful. 
+
+Evaluation:
 Overall, I am satisfied with the outcome of the Stickman's Adventure Website project. It successfully captures the playful and adventurous spirit of Stickman while providing an engaging and interactive experience for users. The incorporation of multimedia elements such as the embedded video and photo carousel adds depth to the storytelling, enhancing user immersion. Additionally, the interactive features like the opacity slider offer a unique way for users to interact with the website and personalize their experience. Moving forward, I may explore further enhancements and refinements to optimize the website's performance and user engagement.
