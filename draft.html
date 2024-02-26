@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scroll Animation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="scrollElement"></div>
+
+    <textarea id="info" placeholder="Good Morning! You have arrived at Chattogram, a beautiful village beside the mountains. Take a small tour <3"></textarea>
+    
+    <button id="fullscr">Go Fullscreen</button>
+    <!-- Navigation bar -->
+    <div id="nav">
+        <!-- link to divs on the same page using their id names -->
+        <a href="#animation"><div class="nav-btn" id="first-page"></div></a>
+        <a href="#second-text"><div class="nav-btn" id="second-page"></div></a>
+    </div>
+
+    <div id="back1">
+        <div id="headline">The Village</div>
+        <img src="3.png" alt="Back1 Image">
+    </div>
+
+    <!-- Animation section -->
+    <!-- Animation section -->
+<div id="animation" class="image-container">
+    <!-- Content to display inside the animation div -->
+    <div class="image-wrapper">
+        <img id="back2" class="image" src="4.png" alt="Hill 2">
+        <div class="text-overlay">
+            <p class="image-text">Sometimes in the sky, the villagers see dark clouds gathering and dissapearing after a while. What can be the reason?</p>
+        </div>
+    </div>
+    <div class="image-wrapper">
+        <img id="people" class="image" src="7.png" alt="People">
+        <div class="text-overlay">
+            <p class="image-text">Is there anything wrong with the "Spirit Mountain"?</p>
+        </div>
+    </div>
+    <div class="image-wrapper">
+        <img id="girl" class="image" src="8.png" alt="Girl">
+        </div>
+
+    <div class="scrollElement"></div>
+</div> 
+
+
+    <!-- Text section -->
+    <<!-- Text section -->
+<div id="second-text" class="text-section">
+    <div class="story-container">
+        <p id="story-text"> A little girl, Mira, wants to embark on her journey to discover the secrets of the mountain. Stay tuned to find out more!</p>
+    </div>
+</div>
+
+
+    <!-- Fairy div 
+    <div id="fairy-div">
+        <span id="fairy-text">Hello!</span>
+        <img id="fairy" src="fairy.png">
+    </div>     
+-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <!-- Ensure the correct path to your JavaScript file -->
+    <script src="scrippt.js"></script>
+</body>
+</html>
