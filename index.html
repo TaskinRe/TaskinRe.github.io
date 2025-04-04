@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rehnuma Taskin - Research Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="An immersive portfolio showcasing research in HCI, robotics, and neuroscience by Rehnuma Taskin">
+</head>
+<body>
+  <!-- Ambient Background -->
+  <div class="ambient-background">
+    <canvas id="gradient-canvas"></canvas>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <div class="logo">RT</div>
+      <nav class="main-nav">
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="#intro" class="nav-link" data-text="About">About</a></li>
+          <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+          <li><a href="#research" class="nav-link" data-text="Research">Research</a></li>
+          <li><a href="#writing" class="nav-link" data-text="Writing">Writing</a></li>
+          <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Intro Section -->
+      <section id="intro" class="section intro-section">
+        <div class="section-inner">
+          <div class="intro-content">
+            <h1 class="title-animation">
+              <span class="word">Rehnuma</span>
+              <span class="word">Taskin</span>
+            </h1>
+            <div class="specialty-container">
+              <div class="specialty-text">
+                <span class="static-text">Exploring </span>
+                <span class="dynamic-text" data-wait="3000" data-words='["human-computer interaction", "soft robotics", "interactive media", "cognitive neuroscience", "particle physics"]'></span>
+              </div>
+            </div>
+            <p class="intro-bio">
+              Researcher at the intersection of technology and human experience, developing innovative solutions in tactile sensing, neural processing, and interactive systems.
+            </p>
+            <div class="cta-container">
+              <a href="#projects" class="cta-button primary">View Projects</a>
+              <a href="#contact" class="cta-button secondary">Get in Touch</a>
+            </div>
+          </div>
+          <div class="intro-visual">
+            <div class="floating-shape"></div>
+            <div class="profile-container">
+              <div class="profile-outline"></div>
+              <div class="profile-image">
+                <!-- Profile image will be added via CSS -->
+              </div>
+            </div>
+            <div class="particle-container" id="particle-container"></div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow-down"></div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="section projects-section">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Research & Development Work</p>
+        </div>
+        <div class="projects-container">
+          <!-- Project Card 1 -->
+          <div class="project-card" data-color="#3B82F6">
+            <div class="card-visual">
+              <div class="card-image">
+                <img src="https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=Tactile+Sensors" alt="Tactile Sensor System">
+              </div>
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-tags">
+                <span class="tag">Robotics</span>
+                <span class="tag">Human-Computer Interaction</span>
+              </div>
+              <h3 class="card-title">Tactile Sensor Fabrication</h3>
+              <p class="card-description">Silicone membrane sleeve-shaped tactile sensors for robotic manipulation and whole-body control.</p>
+              <div class="card-actions">
+                <a href="#" class="card-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card" data-color="#8B5CF6">
+            <div class="card-visual">
+              <div class="card-image">
+                <img src="https://via.placeholder.com/600x400/8B5CF6/FFFFFF?text=EEG+Analysis" alt="EEG Analysis Study">
+              </div>
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-tags">
+                <span class="tag">Neuroscience</span>
+                <span class="tag">Data Analysis</span>
+              </div>
+              <h3 class="card-title">EEG Brain Imaging Research</h3>
+              <p class="card-description">Investigating language and social information processing using event-related potentials (ERPs).</p>
+              <div class="card-actions">
+                <a href="#" class="card-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card" data-color="#10B981">
+            <div class="card-visual">
+              <div class="card-image">
+                <img src="https://via.placeholder.com/600x400/10B981/FFFFFF?text=Muography" alt="Muography Project">
+              </div>
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-tags">
+                <span class="tag">Particle Physics</span>
+                <span class="tag">Simulation</span>
+              </div>
+              <h3 class="card-title">Project Muography</h3>
+              <p class="card-description">Cosmic ray detector simulation with Geant4 for Muon Tomography applications.</p>
+              <div class="card-actions">
+                <a href="#" class="card-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="project-card" data-color="#F59E0B">
+            <div class="card-visual">
+              <div class="card-image">
+                <img src="https://via.placeholder.com/600x400/F59E0B/FFFFFF?text=fMRI+Motion" alt="fMRI Motion Perception">
+              </div>
+              <div class="card-overlay"></div>
+            </div>
+            <div class="card-content">
+              <div class="card-tags">
+                <span class="tag">Cognitive Science</span>
+                <span class="tag">Neural Imaging</span>
+              </div>
+              <h3 class="card-title">fMRI Motion Perception</h3>
+              <p class="card-description">Study of neural responses in the MT and V1 cortices to motion and static stimuli.</p>
+              <div class="card-actions">
+                <a href="#" class="card-btn">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-footer">
+          <a href="#" class="view-all-btn">View All Projects <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </section>
+
+      <!-- Research Section -->
+      <section id="research" class="section research-section">
+        <div class="section-header">
+          <h2 class="section-title">Research</h2>
+          <p class="section-subtitle">Academic Publications & Studies</p>
+        </div>
+        <div class="research-container">
+          <div class="paper-list">
+            <!-- Research Paper 1 -->
+            <div class="paper-item">
+              <div class="paper-year">2024</div>
+              <div class="paper-content">
+                <h3 class="paper-title">Silicone Membrane Sleeve-Shaped Tactile Sensors for Robotic Manipulation</h3>
+                <p class="paper-authors">Rehnuma Taskin, Research Team</p>
+                <p class="paper-venue">NYU Tandon School of Engineering</p>
+                <p class="paper-abstract">Novel approach to fabricating silicone membrane sensors for robot arms, enabling precise tactile feedback for improved object manipulation.</p>
+                <div class="paper-links">
+                  <a href="#" class="paper-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                  <a href="#" class="paper-link"><i class="fas fa-code"></i> Code</a>
+                  <a href="#" class="paper-link"><i class="fas fa-video"></i> Demo</a>
+                </div>
+              </div>
+              <div class="paper-preview">
+                <img src="https://via.placeholder.com/200x120/3B82F6/FFFFFF?text=Tactile+Sensors" alt="Research Preview">
+              </div>
+            </div>
+
+            <!-- Research Paper 2 -->
+            <div class="paper-item">
+              <div class="paper-year">2023</div>
+              <div class="paper-content">
+                <h3 class="paper-title">The Interplay Between Linguistic Content and Social Information</h3>
+                <p class="paper-authors">Rehnuma Taskin, SONA Lab Team</p>
+                <p class="paper-venue">NYU Abu Dhabi, SONA Lab</p>
+                <p class="paper-abstract">ERP study investigating how the brain processes linguistic content in relation to social information like gender stereotypes.</p>
+                <div class="paper-links">
+                  <a href="#" class="paper-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                  <a href="#" class="paper-link"><i class="fas fa-code"></i> Data</a>
+                </div>
+              </div>
+              <div class="paper-preview">
+                <img src="https://via.placeholder.com/200x120/8B5CF6/FFFFFF?text=ERP+Study" alt="Research Preview">
+              </div>
+            </div>
+            
+            <!-- Research Paper 3 -->
+            <div class="paper-item">
+              <div class="paper-year">2023</div>
+              <div class="paper-content">
+                <h3 class="paper-title">Muon Energy Deposition in Triangular Pyramidal Plastic Scintillators</h3>
+                <p class="paper-authors">Rehnuma Taskin, Arenodo Lab Team</p>
+                <p class="paper-venue">NYU Abu Dhabi, Arenodo Lab</p>
+                <p class="paper-abstract">Exploration of Muon Tomography focusing on energy deposited by muon collisions with plastic scintillators in cosmic ray detectors.</p>
+                <div class="paper-links">
+                  <a href="#" class="paper-link"><i class="fas fa-file-pdf"></i> Paper</a>
+                  <a href="#" class="paper-link"><i class="fas fa-code"></i> Simulation</a>
+                </div>
+              </div>
+              <div class="paper-preview">
+                <img src="https://via.placeholder.com/200x120/10B981/FFFFFF?text=Muon+Energy" alt="Research Preview">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Writing Section -->
+      <section id="writing" class="section writing-section">
+        <div class="section-header">
+          <h2 class="section-title">Writing</h2>
+          <p class="section-subtitle">Articles & Insights</p>
+        </div>
+        <div class="writing-container">
+          <div class="featured-article">
+            <div class="article-image">
+              <img src="https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Featured+Article" alt="Featured Article">
+            </div>
+            <div class="article-content">
+              <div class="article-category">Research Insights</div>
+              <h3 class="article-title">The Future of Tactile Sensing in Human-Robot Interaction</h3>
+              <p class="article-excerpt">Exploring how advanced tactile sensors are transforming the way robots interact with humans and their environment.</p>
+              <div class="article-meta">
+                <span class="article-date">April 2, 2025</span>
+                <span class="article-read-time">10 min read</span>
+              </div>
+              <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="articles-grid">
+            <!-- Article 1 -->
+            <div class="article-card">
+              <div class="article-image">
+                <img src="https://via.placeholder.com/400x225/8B5CF6/FFFFFF?text=Article+1" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <div class="article-category">Tutorial</div>
+                <h3 class="article-title">Implementing EEG Data Processing Pipelines</h3>
+                <div class="article-meta">
+                  <span class="article-date">March 15, 2025</span>
+                  <span class="article-read-time">8 min read</span>
+                </div>
+                <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="article-card">
+              <div class="article-image">
+                <img src="https://via.placeholder.com/400x225/10B981/FFFFFF?text=Article+2" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <div class="article-category">Research</div>
+                <h3 class="article-title">Applications of Muon Tomography in Architecture</h3>
+                <div class="article-meta">
+                  <span class="article-date">February 20, 2025</span>
+                  <span class="article-read-time">12 min read</span>
+                </div>
+                <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="article-card">
+              <div class="article-image">
+                <img src="https://via.placeholder.com/400x225/F59E0B/FFFFFF?text=Article+3" alt="Article Image">
+              </div>
+              <div class="article-content">
+                <div class="article-category">Opinion</div>
+                <h3 class="article-title">The Ethical Implications of Neural Interfaces</h3>
+                <div class="article-meta">
+                  <span class="article-date">January 10, 2025</span>
+                  <span class="article-read-time">15 min read</span>
+                </div>
+                <a href="#" class="article-link">Read Article <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section contact-section">
+        <div class="section-header">
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">Let's Collaborate</p>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <p class="contact-text">
+              I'm open to research collaborations, speaking opportunities, and discussions about innovative projects in human-computer interaction, robotics, and neuroscience.
+            </p>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="method-details">
+                  <h4>Email</h4>
+                  <p>rt2609@nyu.edu</p>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="method-details">
+                  <h4>Location</h4>
+                  <p>New York University, Abu Dhabi</p>
+                </div>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/TaskinRe" class="social-link" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/rehnuma-taskin" class="social-link" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Research Gate">
+                <i class="fab fa-researchgate"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="contact-form-wrapper">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <div class="form-border"></div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <div class="form-border"></div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+                <div class="form-border"></div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <div class="form-border"></div>
+              </div>
+              <button type="submit" class="submit-button">
+                <span class="button-text">Send Message</span>
+                <span class="button-icon"><i class="fas fa-paper-plane"></i></span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">RT</div>
+        <div class="footer-nav">
+          <ul class="footer-links">
+            <li><a href="#intro">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#writing">Writing</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/TaskinRe" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rehnuma-taskin" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Rehnuma Taskin. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Page Navigation Dots -->
+  <nav class="dot-navigation">
+    <ul class="nav-dots">
+      <li><a href="#intro" class="nav-dot active" data-section="intro"><span class="dot-label">About</span></a></li>
+      <li><a href="#projects" class="nav-dot" data-section="projects"><span class="dot-label">Projects</span></a></li>
+      <li><a href="#research" class="nav-dot" data-section="research"><span class="dot-label">Research</span></a></li>
+      <li><a href="#writing" class="nav-dot" data-section="writing"><span class="dot-label">Writing</span></a></li>
+      <li><a href="#contact" class="nav-dot" data-section="contact"><span class="dot-label">Contact</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor">
+    <div class="cursor-inner"></div>
+    <div class="cursor-outer"></div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <div class="loader">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" class="loader-circle"></circle>
+      </svg>
+    </div>
+    <div class="loader-text">Loading</div>
+    <div class="loader-progress">
+      <div class="progress-bar"></div>
+      <div class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
