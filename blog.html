@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rehnuma Taskin - Research Blog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Research blog exploring HCI, robotics, neuroscience and more by Rehnuma Taskin">
+</head>
+<body>
+  <!-- Ambient Background -->
+  <div class="ambient-background">
+    <canvas id="gradient-canvas"></canvas>
+  </div>
+
+  <!-- Main Content Wrapper -->
+  <div class="content-wrapper">
+    <!-- Header -->
+    <header class="site-header">
+      <a href="index.html" class="logo">RT</a>
+      <nav class="main-nav">
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="index.html#intro" class="nav-link" data-text="About">About</a></li>
+          <li><a href="index.html#projects" class="nav-link" data-text="Projects">Projects</a></li>
+          <li><a href="index.html#research" class="nav-link" data-text="Research">Research</a></li>
+          <li><a href="blog.html" class="nav-link active" data-text="Blog">Blog</a></li>
+          <li><a href="index.html#contact" class="nav-link" data-text="Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Blog Hero Section -->
+      <section id="blog-hero" class="section blog-hero-section">
+        <div class="section-inner">
+          <div class="hero-content">
+            <h1 class="hero-title">Research Insights & Ideas</h1>
+            <p class="hero-subtitle">Exploring the intersection of technology, neuroscience, and human experience</p>
+            
+            <div class="blog-search-container">
+              <form class="blog-search-form">
+                <input type="text" placeholder="Search articles..." class="blog-search-input">
+                <button type="submit" class="blog-search-button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+        <div class="categories-bar">
+          <div class="categories-container">
+            <a href="#all" class="category-pill active" data-category="all">All Posts</a>
+            <a href="#research" class="category-pill" data-category="research">Research</a>
+            <a href="#tutorials" class="category-pill" data-category="tutorials">Tutorials</a>
+            <a href="#opinion" class="category-pill" data-category="opinion">Opinion</a>
+            <a href="#projects" class="category-pill" data-category="projects">Projects</a>
+            <a href="#neuroscience" class="category-pill" data-category="neuroscience">Neuroscience</a>
+            <a href="#robotics" class="category-pill" data-category="robotics">Robotics</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Posts -->
+      <section id="featured-posts" class="section featured-posts-section">
+        <div class="section-header">
+          <h2 class="section-title">Featured Posts</h2>
+          <p class="section-subtitle">Highlighted research and insights</p>
+        </div>
+        
+        <div class="featured-posts-container">
+          <!-- Featured Post Slider -->
+          <div class="featured-slider">
+            <!-- Slider Nav -->
+            <div class="slider-nav">
+              <button class="slider-prev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button class="slider-next" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
+            
+            <!-- Slider Items -->
+            <div class="slider-container">
+              <!-- Featured Post 1 -->
+              <div class="slider-item active">
+                <div class="featured-post">
+                  <div class="post-image">
+                    <img src="https://via.placeholder.com/1200x600/3B82F6/FFFFFF?text=Featured+Post" alt="Featured Post">
+                    <div class="post-meta">
+                      <span class="post-category">Research</span>
+                      <span class="post-date">April 2, 2025</span>
+                    </div>
+                  </div>
+                  <div class="post-content">
+                    <h3 class="post-title">The Future of Tactile Sensing in Human-Robot Interaction</h3>
+                    <p class="post-excerpt">Exploring how advanced tactile sensors are transforming the way robots interact with humans and their environment, with implications for healthcare, manufacturing, and daily life assistance.</p>
+                    <a href="posts/tactile-sensors-robotics.html" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Featured Post 2 -->
+              <div class="slider-item">
+                <div class="featured-post">
+                  <div class="post-image">
+                    <img src="https://via.placeholder.com/1200x600/8B5CF6/FFFFFF?text=Featured+Post" alt="Featured Post">
+                    <div class="post-meta">
+                      <span class="post-category">Tutorial</span>
+                      <span class="post-date">March 15, 2025</span>
+                    </div>
+                  </div>
+                  <div class="post-content">
+                    <h3 class="post-title">Implementing EEG Data Processing Pipelines: A Comprehensive Guide</h3>
+                    <p class="post-excerpt">A step-by-step guide to building robust EEG data processing pipelines, covering preprocessing, filtering, artifact removal, and feature extraction techniques for brain-computer interfaces.</p>
+                    <a href="posts/eeg-analysis-beginners-guide.html" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Featured Post 3 -->
+              <div class="slider-item">
+                <div class="featured-post">
+                  <div class="post-image">
+                    <img src="https://via.placeholder.com/1200x600/10B981/FFFFFF?text=Featured+Post" alt="Featured Post">
+                    <div class="post-meta">
+                      <span class="post-category">Opinion</span>
+                      <span class="post-date">February 20, 2025</span>
+                    </div>
+                  </div>
+                  <div class="post-content">
+                    <h3 class="post-title">The Ethical Implications of Neural Interfaces in Everyday Life</h3>
+                    <p class="post-excerpt">As neural interfaces move from medical applications to consumer products, we must address questions of privacy, autonomy, and the boundary between human cognition and artificial systems.</p>
+                    <a href="posts/ethics-brain-computer-interfaces.html" class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Slider Pagination -->
+            <div class="slider-pagination">
+              <span class="pagination-dot active" data-index="0"></span>
+              <span class="pagination-dot" data-index="1"></span>
+              <span class="pagination-dot" data-index="2"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Latest Posts -->
+      <section id="latest-posts" class="section latest-posts-section">
+        <div class="section-header">
+          <h2 class="section-title">Latest Posts</h2>
+          <p class="section-subtitle">Recently published articles and insights</p>
+        </div>
+        
+        <div class="filter-options">
+          <div class="filter-sort">
+            <label for="sort-posts">Sort by:</label>
+            <select id="sort-posts" class="sort-select">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="popular">Most Popular</option>
+            </select>
+          </div>
+          
+          <div class="filter-view">
+            <button class="view-btn grid-view active" aria-label="Grid view">
+              <i class="fas fa-th-large"></i>
+            </button>
+            <button class="view-btn list-view" aria-label="List view">
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+        </div>
+        
+        <div class="posts-grid">
+          <!-- Post Card 1 -->
+          <article class="post-card" data-category="research robotics">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=Post+1" alt="Post Image">
+              <div class="card-meta">
+                <span class="post-category">Robotics</span>
+                <span class="post-date">Mar 28, 2025</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Advancements in Soft Robotics Actuation Systems</h3>
+              <p class="card-excerpt">Exploring recent breakthroughs in pneumatic and hydraulic actuation systems for soft robotic applications.</p>
+              <div class="card-footer">
+                <a href="posts/soft-robotics-actuation.html" class="read-more">Read More</a>
+                <div class="post-stats">
+                  <span class="read-time"><i class="far fa-clock"></i> 8 min</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Post Card 2 -->
+          <article class="post-card" data-category="tutorials neuroscience">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/600x400/8B5CF6/FFFFFF?text=Post+2" alt="Post Image">
+              <div class="card-meta">
+                <span class="post-category">Tutorials</span>
+                <span class="post-date">Mar 22, 2025</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Getting Started with ERP Analysis in Python</h3>
+              <p class="card-excerpt">A beginner-friendly tutorial on analyzing Event-Related Potentials (ERPs) using MNE-Python and other open-source tools.</p>
+              <div class="card-footer">
+                <a href="posts/erp-analysis-python.html" class="read-more">Read More</a>
+                <div class="post-stats">
+                  <span class="read-time"><i class="far fa-clock"></i> 15 min</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Post Card 3 -->
+          <article class="post-card" data-category="research projects">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/600x400/10B981/FFFFFF?text=Post+3" alt="Post Image">
+              <div class="card-meta">
+                <span class="post-category">Projects</span>
+                <span class="post-date">Mar 15, 2025</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Building a Cosmic Ray Detector: Part 1</h3>
+              <p class="card-excerpt">Documentation of my ongoing project to build an affordable cosmic ray detector using scintillator materials and photomultiplier tubes.</p>
+              <div class="card-footer">
+                <a href="posts/cosmic-ray-detector-pt1.html" class="read-more">Read More</a>
+                <div class="post-stats">
+                  <span class="read-time"><i class="far fa-clock"></i> 12 min</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Post Card 4 -->
+          <article class="post-card" data-category="opinion neuroscience">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/600x400/F59E0B/FFFFFF?text=Post+4" alt="Post Image">
+              <div class="card-meta">
+                <span class="post-category">Opinion</span>
+                <span class="post-date">Mar 10, 2025</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">The Role of Neuroscience in Modern AI Development</h3>
+              <p class="card-excerpt">Examining how insights from neuroscience are shaping artificial intelligence architectures and research directions.</p>
+              <div class="card-footer">
+                <a href="posts/neuroscience-in-ai.html" class="read-more">Read More</a>
+                <div class="post-stats">
+                  <span class="read-time"><i class="far fa-clock"></i> 10 min</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Post Card 5 -->
+          <article class="post-card" data-category="research robotics">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/600x400/3B82F6/FFFFFF?text=Post+5" alt="Post Image">
+              <div class="card-meta">
+                <span class="post-category">Robotics</span>
+                <span class="post-date">Mar 5, 2025</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Comparing Capacitive vs. Resistive Tactile Sensor Arrays</h3>
+              <p class="card-excerpt">An in-depth analysis of different tactile sensor technologies for robotic skin applications with performance metrics.</p>
+              <div class="card-footer">
+                <a href="posts/tactile-sensor-comparison.html" class="read-more">Read More</a>
+                <div class="post-stats">
+                  <span class="read-time"><i class="far fa-clock"></i> 14 min</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          
+          <!-- Post Card 6 -->
+          <article class="post-card" data-category="tutorials projects">
+            <div class="card-image">
+              <img src="https://via.placeholder.com/600x400/8B5CF6/FFFFFF?text=Post+6" alt="Post Image">
+              <div class="card-meta">
+                <span class="post-category">Tutorials</span>
+                <span class="post-date">Feb 28, 2025</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Setting Up Geant4 for Particle Physics Simulations</h3>
+              <p class="card-excerpt">A step-by-step guide to installing and configuring Geant4 for simulating particle interactions for research projects.</p>
+              <div class="card-footer">
+                <a href="posts/geant4-setup-guide.html" class="read-more">Read More</a>
+                <div class="post-stats">
+                  <span class="read-time"><i class="far fa-clock"></i> 18 min</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="load-more-container">
+          <button class="load-more-btn">
+            <span>Load More Posts</span>
+            <i class="fas fa-sync"></i>
+          </button>
+        </div>
+      </section>
+      
+      <!-- Newsletter Section -->
+      <section id="newsletter" class="section newsletter-section">
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h2 class="newsletter-title">Subscribe to My Newsletter</h2>
+            <p class="newsletter-text">Get notified about new research, articles, and project updates delivered straight to your inbox.</p>
+            <form class="newsletter-form">
+              <div class="form-group">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="subscribe-btn">Subscribe</button>
+              </div>
+              <p class="form-disclaimer">I respect your privacy. No spam, ever.</p>
+            </form>
+          </div>
+          <div class="newsletter-decoration">
+            <div class="floating-shape newsletter-shape"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">RT</div>
+        <div class="footer-nav">
+          <ul class="footer-links">
+            <li><a href="index.html#intro">About</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#research">Research</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/rehnumataskin" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/rehnuma-taskin" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Rehnuma Taskin. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor">
+    <div class="cursor-inner"></div>
+    <div class="cursor-outer"></div>
+  </div>
+  
+  <!-- Page Transition Overlay -->
+  <div class="page-transition-overlay">
+    <div class="transition-panel top-panel">
+      <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+        <path d="M0,0 L100,0 L100,10 Q50,0 0,10 Z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="transition-panel bottom-panel">
+      <svg viewBox="0 0 100 10" preserveAspectRatio="none">
+        <path d="M0,10 L100,10 L100,0 Q50,10 0,0 Z" fill="currentColor"/>
+      </svg>
+    </div>
+    <div class="transition-logo">RT</div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>
