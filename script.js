@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
   initNavigation();
   initScrolling();
   initTypingEffect();
-  initTitleAnimation();
+  initAnimatedName();
   initCustomCursor();
   initRevealAnimations();
   initParticles();
+  initEnhancedInteractions();
 });
 
 // =========================================================================
@@ -249,204 +250,73 @@ function initTypingEffect() {
 }
 
 // =========================================================================
-// Title Animation
+// Interactive Animated Name
 // =========================================================================
-function initTitleAnimation() {
-  const titleAnimation = document.querySelector('.title-animation');
+function initAnimatedName() {
+  const animatedName = document.querySelector('.animated-name');
   
-  if (titleAnimation) {
+  if (!animatedName) return;
+  
+  // Add 3D effect on mouse hover
+  animatedName.addEventListener('mousemove', (e) => {
+    const rect = animatedName.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+    
+    const rotateX = 10 * (0.5 - y);
+    const rotateY = 10 * (x - 0.5);
+    
+    animatedName.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+  
+  // Reset on mouse leave
+  animatedName.addEventListener('mouseleave', () => {
+    animatedName.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+  });
+  
+  // Optional: Add click effect
+  animatedName.addEventListener('click', () => {
+    // Create ripple effect with temporary span
+    const ripple = document.createElement('span');
+    ripple.classList.add('name-ripple');
+    animatedName.appendChild(ripple);
+    
+    // Remove after animation completes
     setTimeout(() => {
-      titleAnimation.classList.add('animated');
-    }, 500);
-  }
-}
-
-// =========================================================================
-// Custom Cursor
-// =========================================================================
-function initCustomCursor() {
-  const cursor = document.querySelector('.custom-cursor');
-  const cursorInner = document.querySelector('.cursor-inner');
-  const cursorOuter = document.querySelector('.cursor-outer');
-  
-  if (!cursor || !cursorInner || !cursorOuter) return;
-  
-  // Update cursor position
-  document.addEventListener('mousemove', (e) => {
-    cursor.style.visibility = 'visible';
-    cursorInner.style.left = `${e.clientX}px`;
-    cursorInner.style.top = `${e.clientY}px`;
-    cursorOuter.style.left = `${e.clientX}px`;
-    cursorOuter.style.top = `${e.clientY}px`;
-  });
-  
-  // Hide cursor when it leaves the window
-  document.addEventListener('mouseout', () => {
-    cursor.style.visibility = 'hidden';
-  });
-  
-  document.addEventListener('mouseover', () => {
-    cursor.style.visibility = 'visible';
-  });
-  
-  // Scale cursor when hovering over links and buttons
-  const interactiveElements = document.querySelectorAll('a, button, input, textarea, .card-btn, .project-card, .article-card');
-  
-  interactiveElements.forEach(el => {
-    el.addEventListener('mouseover', () => {
-      cursorInner.style.transform = 'translate(-50%, -50%) scale(1.5)';
-      cursorOuter.style.transform = 'translate(-50%, -50%) scale(1.5)';
-      cursorOuter.style.backgroundColor = 'rgba(59, 130, 246, 0.2)';
-    });
+      ripple.remove();
+    }, 600);
     
-    el.addEventListener('mouseout', () => {
-      cursorInner.style.transform = 'translate(-50%, -50%) scale(1)';
-      cursorOuter.style.transform = 'translate(-50%, -50%) scale(1)';
-      cursorOuter.style.backgroundColor = 'transparent';
-    });
+    // Trigger a text scramble effect
+    scrambleText(animatedName);
   });
 }
 
-// =========================================================================
-// Reveal Animations on Scroll
-// =========================================================================
-function initRevealAnimations() {
-  const revealElements = document.querySelectorAll('.reveal');
+// Text scramble effect for animated name
+function scrambleText(element) {
+  const originalText = element.innerText;
+  const scrambleChars = "!<>-_\\/*&^%$#@+=";
+  const frames = 20;
+  let frame = 0;
   
-  function checkReveal() {
-    const windowHeight = window.innerHeight;
-    const revealPoint = 150;
+  const interval = setInterval(() => {
+    let scrambledText = "";
     
-    revealElements.forEach(element => {
-      const elementTop = element.getBoundingClientRect().top;
-      
-      if (elementTop < windowHeight - revealPoint) {
-        element.classList.add('active');
+    for (let i = 0; i < originalText.length; i++) {
+      // Keep original character as we get closer to the end
+      if (Math.random() < frame / frames) {
+        scrambledText += originalText[i];
       } else {
-        element.classList.remove('active');
-      }
-    });
-  }
-  
-  window.addEventListener('scroll', checkReveal);
-  window.addEventListener('resize', checkReveal);
-  checkReveal(); // Initial check
-}
-
-// =========================================================================
-// Interactive Particles
-// =========================================================================
-function initParticles() {
-  const particleContainer = document.getElementById('particle-container');
-  if (!particleContainer) return;
-  
-  const particleCount = 30;
-  const colors = ['#3B82F6', '#8B5CF6', '#10B981', '#F59E0B'];
-  
-  for (let i = 0; i < particleCount; i++) {
-    createParticle(particleContainer, colors[Math.floor(Math.random() * colors.length)]);
-  }
-}
-
-function createParticle(container, color) {
-  const particle = document.createElement('div');
-  particle.className = 'particle';
-  
-  // Random position, size and animation duration
-  const size = Math.random() * 15 + 5;
-  const posX = Math.random() * 100;
-  const posY = Math.random() * 100;
-  const duration = Math.random() * 20 + 10;
-  const delay = Math.random() * 5;
-  
-  particle.style.cssText = `
-    position: absolute;
-    width: ${size}px;
-    height: ${size}px;
-    background-color: ${color};
-    left: ${posX}%;
-    top: ${posY}%;
-    opacity: ${Math.random() * 0.6 + 0.2};
-    border-radius: 50%;
-    box-shadow: 0 0 10px ${color};
-    filter: blur(1px);
-    animation: floatParticle ${duration}s ease-in-out ${delay}s infinite alternate;
-  `;
-  
-  container.appendChild(particle);
-  
-  // Create keyframes dynamically for floating animation
-  const style = document.createElement('style');
-  const keyframes = `
-    @keyframes floatParticle {
-      0% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-      100% {
-        transform: translate(${Math.random() * 50 - 25}px, ${Math.random() * 50 - 25}px) rotate(${Math.random() * 360}deg);
+        // Replace with random character
+        scrambledText += scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
       }
     }
-  `;
-  style.innerHTML = keyframes;
-  document.head.appendChild(style);
+    
+    element.setAttribute('data-text', scrambledText);
+    
+    frame++;
+    if (frame >= frames) {
+      clearInterval(interval);
+      element.setAttribute('data-text', originalText);
+    }
+  }, 30);
 }
-
-// =========================================================================
-// Form Handling
-// =========================================================================
-document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contact-form');
-  if (!contactForm) return;
-  
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const formValues = Object.fromEntries(formData.entries());
-    
-    // Simulate form submission
-    const submitButton = contactForm.querySelector('.submit-button');
-    const buttonText = submitButton.querySelector('.button-text');
-    const originalText = buttonText.textContent;
-    
-    // Update button state
-    submitButton.disabled = true;
-    buttonText.textContent = 'Sending...';
-    
-    // Simulate API call with timeout
-    setTimeout(() => {
-      console.log('Form submitted:', formValues);
-      
-      // Reset form
-      contactForm.reset();
-      
-      // Reset button state
-      submitButton.disabled = false;
-      buttonText.textContent = 'Message Sent!';
-      
-      // Reset to original text after delay
-      setTimeout(() => {
-        buttonText.textContent = originalText;
-      }, 3000);
-      
-      // Show success message
-      alert('Thank you for your message! I will get back to you soon.');
-    }, 2000);
-  });
-  
-  // Add focus events for form field animations
-  const formFields = contactForm.querySelectorAll('input, textarea');
-  
-  formFields.forEach(field => {
-    field.addEventListener('focus', function() {
-      this.parentElement.querySelector('.form-border').style.width = '100%';
-    });
-    
-    field.addEventListener('blur', function() {
-      if (!this.value) {
-        this.parentElement.querySelector('.form-border').style.width = '0';
-      }
-    });
-  });
-});
